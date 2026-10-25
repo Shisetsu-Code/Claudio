@@ -1,0 +1,12 @@
+node_modules/
+data/
+profiles.json
+screenshots/
+captures/
+*.log
+*.zip
+.env*
+.backups/
+.DS_Store
+test-results/
+playwright-report/

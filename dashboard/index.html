@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Claudio · Seguimiento</title><link rel="stylesheet" href="/style.css"><script defer src="/app.js"></script>
+</head>
+<body>
+  <aside class="rail"><a class="brand" href="/" aria-label="Claudio inicio">C<span>●</span></a><span class="rail-label">GAME OBSERVER</span><span class="rail-foot">LOCAL<br>ONLY</span></aside>
+  <main>
+    <header><div class="wordmark">claudio<span>/</span><small>GAME OBSERVER</small></div><div id="connection" class="connection">Conectando…</div></header>
+    <section class="heading"><div><p class="eyebrow">TU SESIÓN, EN DIRECTO</p><h1>El juego bajo la lupa<span>.</span></h1><p class="subtitle">Cada tirada, cada señal, cada descubrimiento.</p></div><label class="session-picker">VER SESIÓN<select id="sessions"><option value="current">Sesión actual</option></select></label></section>
+    <section class="game-bar"><div><span id="status" class="badge">SIN SESIÓN</span><h2 id="game">Esperando al juego</h2><p id="url">Abre un juego desde Claude para empezar el seguimiento.</p></div><div class="live-mark"><i></i> VISTA LOCAL</div></section>
+    <section class="metrics" aria-label="Métricas de la sesión">
+      <article><p>TIEMPO TRANSCURRIDO</p><strong id="elapsed">00:00:00</strong><small id="started">Tiempo real · sin acelerar</small></article>
+      <article><p>GIROS OBSERVADOS</p><strong id="spins">0</strong><small id="average">Todavía no hay giros</small><small id="attempts">0 intentos · 0 sin confirmar</small></article>
+      <article><p>VELOCIDAD DEL JUEGO</p><strong id="speed">1<span>×</span></strong><small id="fast">Ritmo normal</small></article>
+      <article><p>SEÑALES A REVISAR</p><strong id="anomalies">0</strong><small>Cambios visuales detectados</small></article>
+    </section>
+    <section class="workspace">
+      <div class="primary"><article class="panel progress-panel"><div class="panel-title"><h3>Progreso del lote</h3><span id="batch-status" class="muted">Sin lote</span></div><div class="progress-numbers"><strong id="completed">0 <span>/ 0 tiradas</span></strong><b id="percent">0%</b></div><progress id="progress" value="0" max="1" aria-label="Tiradas completadas"></progress><div class="progress-meta"><span id="phase">Listo para observar</span><span id="remaining">—</span></div><p id="error" class="error" hidden></p></article>
+      <article class="panel findings-panel"><div class="panel-title"><h3>Lo que encontramos</h3><span id="finding-count" class="count">0</span></div><p class="panel-hint">Notas registradas por Claude. Las señales automáticas aparecen en la actividad.</p><div id="findings" class="findings"><div class="empty"><span>✧</span><h4>El próximo hallazgo empieza aquí</h4><p>Claude puede registrar mecánicas, bonus y observaciones mientras explora el juego.</p></div></div></article></div>
+      <article class="panel activity-panel"><div class="panel-title"><h3>Actividad</h3><span class="muted">EN TIEMPO REAL</span></div><ol id="events" class="events"><li class="empty-event">Los eventos de la sesión aparecerán aquí.</li></ol></article>
+    </section>
+    <footer><span>CLAUDIO / VISION MCP</span><span id="updated">Esperando conexión</span><span>Los datos se guardan en esta PC.</span></footer>
+  </main>
+</body>
+</html>
