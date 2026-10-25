@@ -21,22 +21,22 @@
 - Shutdown, startup failure, browser crash: persist final status and close resources.
 
 ## Task 1: Telemetry and HTTP dashboard
-- [ ] Write tests for live counters, time freeze, history persistence, hostile HTTP requests, state endpoint and live event delivery. Run and observe failure.
-- [ ] Implement `SessionStore` in `lib/session.mjs` and `startDashboard({store,port,dataDir})` in `lib/dashboard.mjs`.
-- [ ] Add responsive dashboard assets with real time display, rate, progress, findings, activity and session selector. Use textContent for untrusted strings.
-- [ ] Verify tests pass.
+- [x] Write tests for live counters, time freeze, history persistence, hostile HTTP requests, state endpoint and live event delivery. Run and observe failure.
+- [x] Implement `SessionStore` in `lib/session.mjs` and `startDashboard({store,port,dataDir})` in `lib/dashboard.mjs`.
+- [x] Add responsive dashboard assets with real time display, rate, progress, findings, activity and session selector. Use textContent for untrusted strings.
+- [x] Verify tests pass.
 
 ## Task 2: Speed control
-- [ ] Write browser tests measuring scaled Date/performance/RAF/timers, return to 1× and new frame behavior. Run and observe failure.
-- [ ] Implement `installSpeedClock({rate})`, `prepareSpeed(context,rate)` and `setContextSpeed(context,rate)` in `lib/speed.mjs`; preserve monotonic time at rate changes.
-- [ ] Verify using real Chromium against local deterministic HTML.
+- [x] Write browser tests measuring scaled Date/performance/RAF/timers, return to 1× and new frame behavior. Run and observe failure.
+- [x] Implement `installSpeedClock({rate})`, `prepareSpeed(context,rate)` and `setContextSpeed(context,rate)` in `lib/speed.mjs`; preserve monotonic time at rate changes.
+- [x] Verify using real Chromium against local deterministic HTML.
 
 ## Task 3: MCP integration
-- [ ] Add end-to-end tests launching stdio, listing tools, recording findings, loading fixture, spinning while polling HTTP, errors, budgets and shutdown. Observe failure.
-- [ ] Integrate state transitions and batch progress into server.mjs. Add set_speed, get_status, get_dashboard and record_finding. Add interruptible batch stop through a tool, and enforce a real deadline within waitMotion/waitStable.
-- [ ] Update docs, package metadata, ignore patterns and CI. Verify the entire test suite and dashboard screenshot.
-- [ ] Review implementation; fix material findings with regression tests.
-- [ ] Back up and update the authorized Claude installation; verify installed server. Initialize Git and publish to the empty user repository without private runtime data.
+- [x] Add end-to-end tests launching stdio, listing tools, recording findings, loading fixture, spinning while polling HTTP, errors, budgets and shutdown. Observe failure.
+- [x] Integrate state transitions and batch progress into server.mjs. Add set_speed, get_status, get_dashboard and record_finding. Add interruptible batch stop through a tool, and enforce a real deadline within waitMotion/waitStable.
+- [x] Update docs, package metadata, ignore patterns and CI. Verify the entire test suite and dashboard screenshot.
+- [x] Review implementation; fix material findings with regression tests.
+- [x] Back up and update the authorized Claude installation; verify installed server. Initialize Git and publish to the empty user repository without private runtime data.
 
 ## Execution ledger
 - User authorized both speed approaches and delegated details. Implement inline without further approval gates.

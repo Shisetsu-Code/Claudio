@@ -34,6 +34,7 @@ test('session progress is observable before finish and survives restart', async 
     store.start('https://example.org/another');
     assert.equal(store.snapshot().current.totalSpins, 0);
     assert.equal(store.snapshot().history.length, 1);
+    store.close();
   } finally { await rm(dir, { recursive: true, force: true }); }
 });
 
