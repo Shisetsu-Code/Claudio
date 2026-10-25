@@ -16,6 +16,11 @@ jobs:
           node-version: 22
           cache: npm
       - run: npm ci --ignore-scripts
-      - run: npx playwright install --with-deps chromium
+      - name: Install Chromium and Linux libraries
+        if: runner.os == 'Linux'
+        run: node node_modules/playwright/cli.js install --with-deps chromium
+      - name: Install Chromium on Windows
+        if: runner.os == 'Windows'
+        run: node node_modules/playwright/cli.js install chromium
       - run: npm run check
       - run: npm test
